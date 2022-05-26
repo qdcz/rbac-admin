@@ -1,5 +1,5 @@
 'use strict';
-
+const assert = require("assert");
 /**
  * @param {Egg.Application} app - egg application
  */
@@ -28,4 +28,5 @@ module.exports = app => {
   router.put('/admin/router', controller.admin.router.index.updRouter);  // 后台管理模板-修改路由信息
   router.delete('/admin/router', controller.admin.router.index.delRouter);  // 后台管理模板-删除路由
 
+  console.log(66,app)
 };

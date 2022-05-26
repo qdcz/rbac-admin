@@ -2,7 +2,7 @@
   <div class="yz">
     <el-table v-loading="listLoading" :data="list" element-loading-text="Loading..." border fit highlight-current-row
       style="width: 100%">
-      <el-table-column width="80" align="center" label="序号" sortable prop="orderNumber">
+      <el-table-column width="50" align="center" label="序号" prop="orderNumber">
         <template slot-scope="scope">
           <span>{{ scope.row.orderNumber }}</span>
         </template>
@@ -17,12 +17,12 @@
           <span>{{ scope.row.uuid || '-' }}</span>
         </template>
       </el-table-column>
-      <el-table-column min-width="160" align="center" label="性别" show-overflow-tooltip sortable prop="sex">
+      <el-table-column min-width="40" align="center" label="性别" show-overflow-tooltip prop="sex">
         <template slot-scope="scope">
           <span>{{ scope.row.sex || '-' }}</span>
         </template>
       </el-table-column>
-      <el-table-column min-width="160" align="center" label="移动电话" show-overflow-tooltip sortable prop="phone">
+      <el-table-column min-width="90" align="center" label="移动电话" show-overflow-tooltip sortable prop="phone">
         <template slot-scope="scope">
           <span>{{ scope.row.phone || '-' }}</span>
         </template>
@@ -37,7 +37,7 @@
           <span>{{ scope.row.introduction || '-' }}</span>
         </template>
       </el-table-column>
-      <el-table-column label="注册时间" align="center" prop="registerTime" :formatter="formatDate" width="200" />
+      <el-table-column label="注册时间" align="center" prop="registerTime" :formatter="formatDate" width="160" />
       <el-table-column width="100" align="center" label="状态" sortable prop="auditState">
         <template slot-scope="scope">
           <span>{{ !scope.row.IsCurrentUse ? '使用中' : '禁用中' }}</span>
@@ -116,7 +116,7 @@
       formatDate(row, column) {
         const data = row[column.property]
         const dt = new Date(data)
-        return dt.getFullYear() 
+        return dt.getFullYear()
           + '-' + (dt.getMonth() + 1 >10 ? dt.getMonth() + 1 :"0"+ (dt.getMonth() + 1))
           + '-' + (dt.getDate() >=10 ? dt.getDate() :"0"+ dt.getDate())
           + ' ' + (dt.getHours() >=10 ? dt.getHours() :"0"+ dt.getHours())

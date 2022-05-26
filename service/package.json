@@ -14,8 +14,10 @@
     "egg-redis": "^2.4.0",
     "egg-scripts": "^2.11.0",
     "egg-view-nunjucks": "^2.3.0",
+    "egg-websocket-plugin": "^1.0.1",
     "qdcz-date": "^1.0.2",
-    "uuid-v4": "^0.1.0"
+    "uuid-v4": "^0.1.0",
+    "ws": "^8.5.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",

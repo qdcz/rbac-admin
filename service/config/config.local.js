@@ -4,7 +4,7 @@ exports.mysql = {
   client: {
     // host
     // host: '192.168.237.128',
-    host: '192.168.16.128',
+    host: '192.168.189.128',
     // 端口号
     port: '3306',
     // 用户名
@@ -26,7 +26,7 @@ exports.redis = {
   client: {
     port: 6379,          // Redis port
     // host: '192.168.237.128',   // Redis host
-    host: '192.168.16.128',
+    host: '192.168.189.128',
     name:"default",
     password: '123456',
     db:1,
