@@ -25,6 +25,7 @@ module.exports = async function(ctx) {
     if (ctx.request.method == 'POST') { // 查信息
       const UserInfoResult = await ctx.service.adminUser.selUserInfoByUuid(uuid);  // 查询用户信息
       const RoleInfoResult = await ctx.service.adminRole.selRoleInfoByUuid(UserInfoResult[0].roleId); // 查询角色信息
+
       const routerIds = RoleInfoResult[0].routerId;   // 该角色挂载的路由id
       const routerIdsForSql = addQuotationMarksForString(routerIds); // 字符串处理
       const routerInfoList = await ctx.service.adminRouter.selRouterInfoByUuids(routerIdsForSql); // 该角色包含的路由信息列表
